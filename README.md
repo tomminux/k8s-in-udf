@@ -1,4 +1,4 @@
-# Building a Kubernetes Cluster in UDF
+# Building a Kubernetes Cluster in UDF
 
 ## UDF - Create two more networks
 * internal on 10.1.10.0/24
