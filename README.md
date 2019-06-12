@@ -35,3 +35,5 @@ apt install kubectl
 **Copy id_rsa.pub from user ansible server's ubuntu user to ".ssh/authorized_keys" on user root on each k8s node and master**
 
 ## Clone the ansible-udf-k8s repository
+
+    git clone https://github.com/tomminux/k8s-in-udf.git
