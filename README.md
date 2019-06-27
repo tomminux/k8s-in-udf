@@ -50,11 +50,23 @@ Reboot the DevSecOps Server
     git clone https://github.com/tomminux/k8s-in-udf.git
     
 Modify 
+
     ansible/inventory/hosts
+
 according to your UDF configuration. 
 
 Modify
-    ansible/playbook/files/k8s-files/hosts
+
+    ansible/playbooks/files/k8s-files/hosts
+
 according to your UDF configuration. 
 
+Change directory into
+
+    cd ansible/playbooks/files/k8s-files
+    
+And download the updated flannel YAML file: kube-flannel.yml
+
+    wget https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml
+    
 
