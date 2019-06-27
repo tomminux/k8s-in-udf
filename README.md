@@ -34,6 +34,10 @@ sudo apt-add-repository "deb http://apt.kubernetes.io/ kubernetes-xenial main"
 apt install kubectl
 ```
 
+Reboot the DevSecOps Server
+
+    reboot
+
 ## Create three linxu Ubuntu Server 18.04, t2.large
 * k8s-master -  Bind a second interface to internal IP address 10.1.20.60
 * k8s-node1 -  Bind a second interface to internal IP address 10.1.20.61
