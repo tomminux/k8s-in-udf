@@ -13,7 +13,6 @@ ssh-keygen -b 2048
 sudo su -
 apt update
 apt upgrade -y
-apt install ansible -y
 echo "devsecops-server" > /etc/hostname
 echo -e '#!/bin/bash\nifconfig eth1 10.1.20.4/24 up' > /etc/rc.local
 chmod 755 /etc/rc.local
