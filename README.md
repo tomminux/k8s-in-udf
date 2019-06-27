@@ -19,6 +19,14 @@ echo -e '#!/bin/bash\nifconfig eth1 10.1.20.4/24 up' > /etc/rc.local
 chmod 755 /etc/rc.local
 ```
 
+Update the Ansible package in order to use the "reboot" module (ansible > v2.7)
+
+```
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 93C4A3FD7BB9C367
+sudo apt-add-repository "deb http://ppa.launchpad.net/ansible/ansible/ubuntu bionic main"
+sudo apt install ansible
+```
+
 If you want to run "kubectl" from DevSecOps Server, run this as root
 
 ```bash
@@ -37,3 +45,13 @@ apt install kubectl
 ## Clone the ansible-udf-k8s repository
 
     git clone https://github.com/tomminux/k8s-in-udf.git
+    
+Modify 
+    ansible/inventory/hosts
+according to your UDF configuration. 
+
+Modify
+    ansible/playbook/files/k8s-files/hosts
+according to your UDF configuration. 
+
+
