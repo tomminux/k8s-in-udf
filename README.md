@@ -49,25 +49,25 @@ Reboot the DevSecOps Server
 
     git clone https://github.com/tomminux/k8s-in-udf.git
     
+Change directory
+
+    cd k8s-in-udf/ansible
+    
 Modify 
 
-    ansible/inventory/hosts
+    inventory/hosts
 
 according to your UDF configuration. 
 
 Modify
 
-    ansible/playbooks/files/k8s-files/hosts
+    playbooks/files/k8s-files/hosts
 
 according to your UDF configuration. 
-
-Change directory into
-
-    cd ansible/playbooks/files/k8s-files
     
 And download the updated flannel YAML file: kube-flannel.yml and modify it to run flannel on the eth1 interface in UDF:
 
-    curl -s https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml | sed '/.*kube-subnet-mgr/a\ \ \ \ \ \ \ \ - --iface=eth1' > kube-flannel.yml
+    curl -s https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml | sed '/.*kube-subnet-mgr/a\ \ \ \ \ \ \ \ - --iface=eth1' > playbooks/files/k8s-files/kube-flannel.yml
 
 
 
