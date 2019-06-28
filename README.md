@@ -69,5 +69,17 @@ And download the updated flannel YAML file: kube-flannel.yml and modify it to ru
 
     curl -s https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml | sed '/.*kube-subnet-mgr/a\ \ \ \ \ \ \ \ - --iface=eth1' > playbooks/files/k8s-files/kube-flannel.yml
 
+## Run the playbook
 
+In order to finally build the cluster:
+
+    ansible-playbook playbooks/install-k8s-cluster.yaml
+    
+At the end of the run, if eveything was good, you should be able to "see" the cluster running, directly from your Linux DevSecOps Server:
+
+    kubectl get pods -A -o wide
+    
+And you can verify that all system pods, including Flannel pods, are running on the correct internal interface. 
+
+**ENJOY YOUR BRAND NEW CLUSTER**
 
