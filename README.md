@@ -43,7 +43,7 @@ Reboot the DevSecOps Server
 * k8s-node1 -  Bind a second interface to internal IP address 10.1.20.61
 * k8s-node2 -  Bind a second interface to internal IP address 10.1.20.62
 
-**Copy id_rsa.pub from user ansible server's ubuntu user to ".ssh/authorized_keys" on user root on each k8s node and master**
+**Copy id_rsa.pub from user ansible server's ubuntu user to ".ssh/authorized_keys" __on user root__ on each k8s node and master**
 
 ## Clone the ansible-udf-k8s repository
 
