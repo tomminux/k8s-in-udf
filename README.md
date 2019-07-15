@@ -43,7 +43,7 @@ Reboot the DevSecOps Server
 * k8s-node1 -  Bind a second interface to internal IP address 10.1.20.61
 * k8s-node2 -  Bind a second interface to internal IP address 10.1.20.62
 
-**Copy id_rsa.pub from user ansible server's ubuntu user to ".ssh/authorized_keys" on _user root_ on each k8s node and master**
+_Copy id_rsa.pub from user ansible server's ubuntu user to ".ssh/authorized_keys" **on user root** on each k8s node and master_
 
 ## Clone the ansible-udf-k8s repository
 
@@ -65,7 +65,7 @@ Modify
 
 according to your UDF configuration. 
     
-And download the updated flannel YAML file: kube-flannel.yml and modify it to run flannel on the eth1 interface in UDF:
+And download the updated flannel YAML file: kube-flannel.yml and modify it to run flannel on the eth1 interface in UDF (_make sure to execute this in k8s-in-udf/ansible directory_):
 
     curl -s https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml | sed '/.*kube-subnet-mgr/a\ \ \ \ \ \ \ \ - --iface=eth1' > playbooks/files/k8s-files/kube-flannel.yml
 
