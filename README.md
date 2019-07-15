@@ -1,8 +1,8 @@
 # Building a Kubernetes Cluster in UDF
 
 ## UDF - Create two more networks
-* internal on 10.1.10.0/24
-* external on 10.1.20.0/24
+* external on 10.1.10.0/24
+* internal on 10.1.20.0/24
 
 ## UDF - Create a linux Ubuntu Server 18.04, t2.large
 
