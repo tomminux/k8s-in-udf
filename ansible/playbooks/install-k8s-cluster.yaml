@@ -87,7 +87,7 @@
   tasks:
 
     - name: k8s Cluster initialization
-      shell: kubeadm init --apiserver-advertise-address {{ eth1_ip }} --pod-network-cidr 10.244.0.0/16 --token-ttl 0 >> cluster_initialized.txt
+      shell: kubeadm init --apiserver-advertise-address {{ secondNetIf_ip }} --pod-network-cidr 10.244.0.0/16 --token-ttl 0 >> cluster_initialized.txt
       args:
         creates: cluster_initialized.txt
 
