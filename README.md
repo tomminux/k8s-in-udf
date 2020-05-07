@@ -57,7 +57,7 @@ Modify
 
     inventory/hosts
 
-according to your UDF configuration. 
+according to your UDF configuration: please be carefull on second interafce name, it could be eth1 or ens6, check on your boxes. 
 
 Modify
 
@@ -67,7 +67,13 @@ according to your UDF configuration.
     
 And download the updated flannel YAML file: kube-flannel.yml and modify it to run flannel on the eth1 interface in UDF (_make sure to execute this in k8s-in-udf/ansible directory_):
 
+If you are running your Deployment in AWS please use:
+
     curl -s https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml | sed '/.*kube-subnet-mgr/a\ \ \ \ \ \ \ \ - --iface=eth1' > playbooks/files/k8s-files/kube-flannel.yml
+
+If you are running your Deployment in UDF Hypervisor please use:
+
+    curl -s https://raw.githubusercontent.com/coreos/flannel/master/Documentation/kube-flannel.yml | sed '/.*kube-subnet-mgr/a\ \ \ \ \ \ \ \ - --iface=ens6' > playbooks/files/k8s-files/kube-flannel.yml
 
 ## Run the playbook
 
